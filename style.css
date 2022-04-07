@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+*,*::after,*::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2rem;
+  background-color: antiquewhite;
+}
+/* name all elements in header and footer */
+.h4 {
+  grid-area: h4;
+}
+.container p:first-of-type {
+  grid-area: p1;
+}
+.container p:nth-of-type(2) {
+  grid-area: p2;
+}
+.container p:nth-of-type(3) {
+  grid-area: p3;
+}
+.container p:nth-of-type(4) {
+  grid-area: p4;
+}
+.menu {
+  grid-area: menu;
+  font-weight: bold;
+}
+.small img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+}
+.big img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+}
+/* giving grid-area name all the boxes */
+.small1 {
+  grid-area: small1;
+}
+.small2 {
+  grid-area: small2;
+}
+.small3 {
+  grid-area: small3;
+}
+.small4 {
+  position: relative;
+  grid-area: small4;
+}
+/* giving the Red Design text */
+.small4::after {
+  position: absolute;
+  content: "Design";
+  font-size: 16rem;
+  color: red;
+  top: 0;
+  left: -20.5rem;
+}
+
+.small5 {
+  grid-area: small5;
+}
+.small6 {
+  grid-area: small6;
+}
+.small7 {
+  grid-area: small7;
+}
+.big1 {
+  grid-area: big1;
+}
+.big2 {
+  grid-area: big2;
+}
+.container {
+  display: grid;
+  grid-template-rows: minmax(4rem,auto);
+  margin: 1rem auto;
+  gap: 0.1rem;
+  width: 80%;
+  height: 80rem;
+  grid-template-areas:
+    "h4 h4 p1 p2 p3 p4 menu menu"
+    "small1 small2 . . . . big1 big1"
+    ". . small3 . small4 . big1 big1"
+    "big2 big2 . small5 empty6 small6 . ."
+    "big2 big2 . . . . small7 ."
+    "footer1 footer1 footer1 footer1 footer1 footer2 footer2 footer2";
+}
+.footer1 {
+    grid-area: footer1;
+    font-weight: bold;
+  }
+  .footer2 {
+    grid-area: footer2;
+    font-style: italic;
+  }
+  
